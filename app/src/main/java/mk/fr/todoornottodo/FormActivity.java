@@ -15,6 +15,8 @@ import fr.mk.database.DatabaseHandler;
 public class FormActivity extends AppCompatActivity {
 
     private EditText editTextNom;
+    private int checked;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,8 @@ public class FormActivity extends AppCompatActivity {
     public void onValid(View v) {
         //Récuperation de la saisie de l'utilisateur
         String name = ((EditText) findViewById(R.id.editTextNom)).getText().toString();
+        checked=1;
+
 
 
 
@@ -39,6 +43,8 @@ public class FormActivity extends AppCompatActivity {
         //définition des données à inserer
         ContentValues insertValues = new ContentValues();
         insertValues.put("name", name);
+        insertValues.put("checked", checked);
+
 
         try {
             db.getWritableDatabase().insert("taches", null, insertValues);

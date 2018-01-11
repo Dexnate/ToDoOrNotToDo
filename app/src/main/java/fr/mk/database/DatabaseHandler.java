@@ -17,7 +17,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String TACHE_TABLE_SQL ="CREATE TABLE taches("+
             "id INTEGER PRIMARY KEY AUTOINCREMENT,"+
             "name TEXT,"+
-            "checked Integer NOT NULL)";
+            "checked INTEGER NOT NULL)";
 
     public DatabaseHandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);

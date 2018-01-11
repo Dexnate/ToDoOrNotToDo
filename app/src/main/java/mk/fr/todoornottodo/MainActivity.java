@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         //Reference aux widgets
         tacheListView = findViewById(R.id.tacheListView);
         filterView = findViewById(R.id.filterView);
-        spinner = findViewById(R.id.spinner);
+       // spinner = findViewById(R.id.spinner);
 
         this.db = new DatabaseHandler(this);
         this.dao = new TacheDAO(this.db);
@@ -42,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
 
         //Instanciation du DAO pour les contacts
         this.dao = new TacheDAO(this.db);
+
+
 
 
 

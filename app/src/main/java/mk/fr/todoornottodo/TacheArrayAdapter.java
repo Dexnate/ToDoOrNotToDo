@@ -28,6 +28,7 @@ public class TacheArrayAdapter extends ArrayAdapter {
         super(context,0,data);
         this.context = (Activity)context;
         this.data = data;
+        this.inflater = this.context.getLayoutInflater();
     }
 
     @NonNull
@@ -43,7 +44,7 @@ public class TacheArrayAdapter extends ArrayAdapter {
         TextView nameTextView = view.findViewById(R.id.listTextViewName);
         nameTextView.setText(tacheData.getName());
 
-
+       
 
 
         return view;
